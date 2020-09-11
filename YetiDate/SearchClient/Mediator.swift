@@ -76,7 +76,7 @@ open class Mediator<ColleagueType> {
   }
 
   public func removeColleague(_ colleague: ColleagueType) {
-    guard let index = colleagues.index(where: {
+    guard let index = colleagues.firstIndex(where: {
       ($0 as AnyObject) === (colleague as AnyObject)
     }) else { return }
     colleagueWrappers.remove(at: index)
